@@ -5,7 +5,7 @@ use Slim\Factory\AppFactory;
 use Peru\Jne\DniFactory;
 use Peru\Sunat\RucFactory;
 
-require __DIR__ . 'vendor/autoload.php';
+require 'vendor'. DIRECTORY_SEPARATOR .'autoload.php';
 
 $app = AppFactory::create();
 
