@@ -14,7 +14,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
     return $response;
 });
 
-$app->get('/ruc', function (Request $request, Response $response, $args) {
+$app->post('/ruc', function (Request $request, Response $response, $args) {
     $body = json_decode($request->getBody());
 
     $factory = new RucFactory();
@@ -36,7 +36,7 @@ $app->get('/ruc', function (Request $request, Response $response, $args) {
         ->withStatus(200);
 });
 
-$app->get('/dni', function (Request $request, Response $response, $args) {
+$app->post('/dni', function (Request $request, Response $response, $args) {
     $body = json_decode($request->getBody());
 
     $factory = new DniFactory();
