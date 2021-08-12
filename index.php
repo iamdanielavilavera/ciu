@@ -4,10 +4,23 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 use Peru\Jne\DniFactory;
 use Peru\Sunat\RucFactory;
+use Slim\Exception\HttpNotFoundException;
 
 require 'vendor'. DIRECTORY_SEPARATOR .'autoload.php';
 
 $app = AppFactory::create();
+
+$app->options('/{routes:.+}', function ($request, $response, $args) {
+    return $response;
+});
+
+$app->add(function ($request, $handler) {
+    $response = $handler->handle($request);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+});
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("API v1.0 available...!");
@@ -56,6 +69,10 @@ $app->post('/dni', function (Request $request, Response $response, $args) {
     return $response
         ->withHeader('Content-Type', 'application/json')
         ->withStatus(200);
+});
+
+$app->map(['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], '/{routes:.+}', function ($request, $response) {
+    throw new HttpNotFoundException($request);
 });
 
 $app->run();
