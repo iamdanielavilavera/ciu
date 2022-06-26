@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b42fad21ac57156f785fa6be8f66f103",
+    "content-hash": "93537497e02a99fe51f2cd043876a36c",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -64,16 +64,16 @@
         },
         {
             "name": "giansalex/peru-consult",
-            "version": "v4.4.4",
+            "version": "v4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giansalex/peru-consult.git",
-                "reference": "8907b07b1d4346948d7a8169f6a58f2867f9be0a"
+                "reference": "1e95abbaa6a797d854d72b5143f89167da44b353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giansalex/peru-consult/zipball/8907b07b1d4346948d7a8169f6a58f2867f9be0a",
-                "reference": "8907b07b1d4346948d7a8169f6a58f2867f9be0a",
+                "url": "https://api.github.com/repos/giansalex/peru-consult/zipball/1e95abbaa6a797d854d72b5143f89167da44b353",
+                "reference": "1e95abbaa6a797d854d72b5143f89167da44b353",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
             ],
             "support": {
                 "issues": "https://github.com/giansalex/peru-consult/issues",
-                "source": "https://github.com/giansalex/peru-consult/tree/v4.4.4"
+                "source": "https://github.com/giansalex/peru-consult/tree/v4.5.0"
             },
             "funding": [
                 {
@@ -133,7 +133,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-07-13T03:43:57+00:00"
+            "time": "2021-11-09T02:46:21+00:00"
         },
         {
             "name": "nikic/fast-route",

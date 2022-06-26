@@ -2,6 +2,6 @@
     "require": {
         "slim/slim": "4.*",
         "slim/psr7": "^1.4",
-        "giansalex/peru-consult": "^4.4"
+        "giansalex/peru-consult": "^4.5"
     }
 }
